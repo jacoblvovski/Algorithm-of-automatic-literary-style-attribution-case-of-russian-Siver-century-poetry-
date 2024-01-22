@@ -73,7 +73,6 @@ for topic in topics_dict.keys():
 
 sorted_topic_scores = sorted(topic_scores_dict.items(), key=lambda x:x[1], reverse=True)
 
-#sorted_topic_scores_with_style = [list(topic) for topic in sorted_topic_scores]
 sorted_topic_scores_with_style = [topic + (topics_dict[topic[0]],) for topic in sorted_topic_scores]
 
 print(*sorted_topic_scores_with_style, sep='\n')
